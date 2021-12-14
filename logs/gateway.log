@@ -1,0 +1,328 @@
+2021-12-15 00:22:27.214 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:22:29.874 [1;31mERROR[0;39m [           main] [36mo.s.boot.SpringApplication         [0;39m[837] : Application run failed
+java.lang.IllegalStateException: Failed to load property source from 'file:/D:/springcloud-alibaba-git/my-spring-cloud-alibaba/cloud-gateway/build/resources/main/application.yml' (classpath:/application.yml)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:553)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:498)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:468)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$7(ConfigFileApplicationListener.java:447)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$8(ConfigFileApplicationListener.java:447)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:444)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$0(ConfigFileApplicationListener.java:347)
+	at org.springframework.boot.context.config.FilteredPropertySource.apply(FilteredPropertySource.java:54)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:335)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:226)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:210)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:200)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:188)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.huma.gateway.GateWayApplication.main(GateWayApplication.java:11)
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: while scanning for the next token
+found character '@' that cannot start any token. (Do not use @ for indentation)
+ in 'reader', line 3, column 11:
+        name: @artifactId@
+              ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:419)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:227)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:586)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:136)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:257)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:248)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:236)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:162)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:257)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:248)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:236)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:162)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:257)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:248)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:236)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:162)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:95)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:134)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:494)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:200)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:164)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:76)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:607)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:523)
+	... 25 common frames omitted
+2021-12-15 00:23:32.097 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:23:34.023 [34mINFO [0;39m [           main] [36m.a.n.c.c.i.LocalConfigInfoProcessor[0;39m[195] : LOCAL_SNAPSHOT_PATH:C:\Users\Administrator\nacos\config
+2021-12-15 00:23:34.055 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.Limiter   [0;39m[ 53] : limitTime:5.0
+2021-12-15 00:23:35.216 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway] & group[DEFAULT_GROUP]
+2021-12-15 00:23:35.523 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:23:35.684 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway-dev.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:23:35.689 [34mINFO [0;39m [           main] [36mropertySourceBootstrapConfiguration[0;39m[109] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cloud-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway,DEFAULT_GROUP'}]
+2021-12-15 00:23:35.739 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[655] : The following profiles are active: dev
+2021-12-15 00:23:37.091 [34mINFO [0;39m [           main] [36mo.s.c.context.scope.GenericScope   [0;39m[295] : BeanFactory id=d6d5727f-30bf-3435-afd7-213f30252e82
+2021-12-15 00:23:37.147 [31mWARN [0;39m [           main] [36m.AnnotationConfigApplicationContext[0;39m[559] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+2021-12-15 00:23:37.158 [34mINFO [0;39m [           main] [36mtionEvaluationReportLoggingListener[0;39m[136] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-15 00:23:37.173 [1;31mERROR[0;39m [           main] [36mo.s.boot.SpringApplication         [0;39m[837] : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.huma.gateway.GateWayApplication.main(GateWayApplication.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/http/HttpMethod
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.http.HttpMethod
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 common frames omitted
+2021-12-15 00:25:21.200 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:25:24.520 [34mINFO [0;39m [           main] [36m.a.n.c.c.i.LocalConfigInfoProcessor[0;39m[195] : LOCAL_SNAPSHOT_PATH:C:\Users\Administrator\nacos\config
+2021-12-15 00:25:24.586 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.Limiter   [0;39m[ 53] : limitTime:5.0
+2021-12-15 00:25:24.884 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway] & group[DEFAULT_GROUP]
+2021-12-15 00:25:25.267 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:25:25.310 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway-dev.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:25:25.312 [34mINFO [0;39m [           main] [36mropertySourceBootstrapConfiguration[0;39m[109] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cloud-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway,DEFAULT_GROUP'}]
+2021-12-15 00:25:25.328 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[655] : The following profiles are active: dev
+2021-12-15 00:25:27.312 [34mINFO [0;39m [           main] [36mo.s.c.context.scope.GenericScope   [0;39m[295] : BeanFactory id=d6d5727f-30bf-3435-afd7-213f30252e82
+2021-12-15 00:25:27.489 [31mWARN [0;39m [           main] [36m.AnnotationConfigApplicationContext[0;39m[559] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+2021-12-15 00:25:27.529 [34mINFO [0;39m [           main] [36mtionEvaluationReportLoggingListener[0;39m[136] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-15 00:25:27.561 [1;31mERROR[0;39m [           main] [36mo.s.boot.SpringApplication         [0;39m[837] : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.huma.gateway.GateWayApplication.main(GateWayApplication.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/http/HttpMethod
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.http.HttpMethod
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 common frames omitted
+2021-12-15 00:26:24.009 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:26:26.690 [34mINFO [0;39m [           main] [36m.a.n.c.c.i.LocalConfigInfoProcessor[0;39m[195] : LOCAL_SNAPSHOT_PATH:C:\Users\Administrator\nacos\config
+2021-12-15 00:26:26.778 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.Limiter   [0;39m[ 53] : limitTime:5.0
+2021-12-15 00:26:27.065 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway] & group[DEFAULT_GROUP]
+2021-12-15 00:26:27.114 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:26:27.163 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[cloud-gateway-dev.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:26:27.167 [34mINFO [0;39m [           main] [36mropertySourceBootstrapConfiguration[0;39m[109] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cloud-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cloud-gateway,DEFAULT_GROUP'}]
+2021-12-15 00:26:27.209 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[655] : The following profiles are active: dev
+2021-12-15 00:26:28.435 [34mINFO [0;39m [           main] [36mo.s.c.context.scope.GenericScope   [0;39m[295] : BeanFactory id=d6d5727f-30bf-3435-afd7-213f30252e82
+2021-12-15 00:26:28.611 [31mWARN [0;39m [           main] [36m.AnnotationConfigApplicationContext[0;39m[559] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+2021-12-15 00:26:28.645 [34mINFO [0;39m [           main] [36mtionEvaluationReportLoggingListener[0;39m[136] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-15 00:26:28.693 [1;31mERROR[0;39m [           main] [36mo.s.boot.SpringApplication         [0;39m[837] : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.huma.gateway.GateWayApplication.main(GateWayApplication.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/http/HttpMethod
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.http.HttpMethod
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 common frames omitted
+2021-12-15 00:30:02.587 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:30:05.130 [34mINFO [0;39m [           main] [36m.a.n.c.c.i.LocalConfigInfoProcessor[0;39m[195] : LOCAL_SNAPSHOT_PATH:C:\Users\Administrator\nacos\config
+2021-12-15 00:30:05.167 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.Limiter   [0;39m[ 53] : limitTime:5.0
+2021-12-15 00:30:05.454 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway] & group[DEFAULT_GROUP]
+2021-12-15 00:30:05.500 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:30:05.545 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway-dev.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:30:05.547 [34mINFO [0;39m [           main] [36mropertySourceBootstrapConfiguration[0;39m[109] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-huma-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-huma-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-huma-gateway,DEFAULT_GROUP'}]
+2021-12-15 00:30:05.558 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[655] : The following profiles are active: dev
+2021-12-15 00:30:07.408 [34mINFO [0;39m [           main] [36mo.s.c.context.scope.GenericScope   [0;39m[295] : BeanFactory id=d6d5727f-30bf-3435-afd7-213f30252e82
+2021-12-15 00:30:07.469 [31mWARN [0;39m [           main] [36m.AnnotationConfigApplicationContext[0;39m[559] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+2021-12-15 00:30:07.482 [34mINFO [0;39m [           main] [36mtionEvaluationReportLoggingListener[0;39m[136] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-15 00:30:07.499 [1;31mERROR[0;39m [           main] [36mo.s.boot.SpringApplication         [0;39m[837] : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceModelToOpenApiMapperImpl': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.huma.gateway.GateWayApplication.main(GateWayApplication.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [springfox.documentation.oas.mappers.ServiceModelToOpenApiMapperImpl] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/http/HttpMethod
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.http.HttpMethod
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 24 common frames omitted
+2021-12-15 00:32:12.041 [34mINFO [0;39m [kground-preinit] [36mo.h.validator.internal.util.Version[0;39m[ 21] : HV000001: Hibernate Validator 6.1.5.Final
+2021-12-15 00:32:14.180 [34mINFO [0;39m [           main] [36m.a.n.c.c.i.LocalConfigInfoProcessor[0;39m[195] : LOCAL_SNAPSHOT_PATH:C:\Users\Administrator\nacos\config
+2021-12-15 00:32:14.215 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.Limiter   [0;39m[ 53] : limitTime:5.0
+2021-12-15 00:32:14.508 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway] & group[DEFAULT_GROUP]
+2021-12-15 00:32:15.163 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:32:15.561 [31mWARN [0;39m [           main] [36m.a.c.n.c.NacosPropertySourceBuilder[0;39m[ 87] : Ignore the empty nacos configuration and get it based on dataId[huma-gateway-dev.yml] & group[DEFAULT_GROUP]
+2021-12-15 00:32:15.564 [34mINFO [0;39m [           main] [36mropertySourceBootstrapConfiguration[0;39m[109] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-huma-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-huma-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-huma-gateway,DEFAULT_GROUP'}]
+2021-12-15 00:32:15.574 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[655] : The following profiles are active: dev
+2021-12-15 00:32:17.235 [34mINFO [0;39m [           main] [36mo.s.c.context.scope.GenericScope   [0;39m[295] : BeanFactory id=bb956623-732a-3374-9c73-6442ef46a998
+2021-12-15 00:32:17.331 [34mINFO [0;39m [           main] [36monDelegate$BeanPostProcessorChecker[0;39m[335] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-15 00:32:17.334 [34mINFO [0;39m [           main] [36monDelegate$BeanPostProcessorChecker[0;39m[335] : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-15 00:32:17.337 [34mINFO [0;39m [           main] [36monDelegate$BeanPostProcessorChecker[0;39m[335] : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-15 00:32:17.837 [31mWARN [0;39m [           main] [36mo.s.b.actuate.endpoint.EndpointId  [0;39m[155] : Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+2021-12-15 00:32:17.837 [31mWARN [0;39m [           main] [36mo.s.b.actuate.endpoint.EndpointId  [0;39m[155] : Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2021-12-15 00:32:17.838 [31mWARN [0;39m [           main] [36mo.s.b.actuate.endpoint.EndpointId  [0;39m[155] : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-12-15 00:32:18.984 [34mINFO [0;39m [           main] [36mcom.alibaba.nacos.client.naming    [0;39m[ 56] : initializer namespace from System Property :null
+2021-12-15 00:32:18.985 [34mINFO [0;39m [           main] [36mcom.alibaba.nacos.client.naming    [0;39m[ 65] : initializer namespace from System Environment :null
+2021-12-15 00:32:18.986 [34mINFO [0;39m [           main] [36mcom.alibaba.nacos.client.naming    [0;39m[ 75] : initializer namespace from System Property :null
+2021-12-15 00:32:22.786 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [After]
+2021-12-15 00:32:22.788 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Before]
+2021-12-15 00:32:22.789 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Between]
+2021-12-15 00:32:22.791 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Cookie]
+2021-12-15 00:32:22.792 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Header]
+2021-12-15 00:32:22.793 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Host]
+2021-12-15 00:32:22.794 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Method]
+2021-12-15 00:32:22.795 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Path]
+2021-12-15 00:32:22.796 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Query]
+2021-12-15 00:32:22.797 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2021-12-15 00:32:22.799 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [RemoteAddr]
+2021-12-15 00:32:22.801 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [Weight]
+2021-12-15 00:32:22.802 [34mINFO [0;39m [           main] [36ms.c.g.r.RouteDefinitionRouteLocator[0;39m[139] : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-12-15 00:32:23.000 [34mINFO [0;39m [           main] [36mo.s.b.a.e.web.EndpointLinksResolver[0;39m[ 58] : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-15 00:32:23.237 [31mWARN [0;39m [           main] [36mc.n.c.s.URLConfigurationSource     [0;39m[121] : No URLs will be polled as dynamic configuration sources.
+2021-12-15 00:32:23.238 [34mINFO [0;39m [           main] [36mc.n.c.s.URLConfigurationSource     [0;39m[122] : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-12-15 00:32:23.250 [31mWARN [0;39m [           main] [36mc.n.c.s.URLConfigurationSource     [0;39m[121] : No URLs will be polled as dynamic configuration sources.
+2021-12-15 00:32:23.250 [34mINFO [0;39m [           main] [36mc.n.c.s.URLConfigurationSource     [0;39m[122] : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-12-15 00:32:25.685 [34mINFO [0;39m [           main] [36mo.s.s.c.ThreadPoolTaskScheduler    [0;39m[181] : Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2021-12-15 00:32:30.385 [34mINFO [0;39m [           main] [36mio.undertow                        [0;39m[117] : starting server: Undertow - 2.1.3.Final
+2021-12-15 00:32:30.397 [34mINFO [0;39m [           main] [36morg.xnio                           [0;39m[ 95] : XNIO version 3.8.0.Final
+2021-12-15 00:32:30.409 [34mINFO [0;39m [           main] [36morg.xnio.nio                       [0;39m[ 59] : XNIO NIO Implementation Version 3.8.0.Final
+2021-12-15 00:32:30.478 [34mINFO [0;39m [           main] [36morg.jboss.threads                  [0;39m[ 52] : JBoss Threads version 3.1.0.Final
+2021-12-15 00:32:30.542 [34mINFO [0;39m [           main] [36mo.s.b.w.e.u.UndertowWebServer      [0;39m[133] : Undertow started on port(s) 7000 (http)
+2021-12-15 00:32:33.028 [34mINFO [0;39m [           main] [36mcom.alibaba.nacos.client.naming    [0;39m[ 66] : [BEAT] adding beat: {"cluster":"DEFAULT","ip":"172.222.222.18","metadata":{"preserved.register.source":"SPRING_CLOUD","version":"v1"},"period":5000,"port":7000,"scheduled":false,"serviceName":"DEFAULT_GROUP@@huma-gateway","stopped":false,"weight":1.0} to beat map.
+2021-12-15 00:32:33.128 [34mINFO [0;39m [           main] [36mcom.alibaba.nacos.client.naming    [0;39m[196] : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@huma-gateway with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"172.222.222.18","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD","version":"v1"},"port":7000,"weight":1.0}
+2021-12-15 00:32:33.181 [34mINFO [0;39m [           main] [36mc.a.c.n.r.NacosServiceRegistry     [0;39m[ 65] : nacos registry, DEFAULT_GROUP huma-gateway 172.222.222.18:7000 register finished
+2021-12-15 00:32:33.824 [34mINFO [0;39m [           main] [36mcom.huma.gateway.GateWayApplication[0;39m[ 61] : Started GateWayApplication in 23.507 seconds (JVM running for 25.768)
+2021-12-15 00:32:33.832 [34mINFO [0;39m [           main] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[197] : [fixed-10.10.8.175_8848] [subscribe] huma-gateway-dev.yml+DEFAULT_GROUP
+2021-12-15 00:32:33.834 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.CacheData [0;39m[ 92] : [fixed-10.10.8.175_8848] [add-listener] ok, tenant=, dataId=huma-gateway-dev.yml, group=DEFAULT_GROUP, cnt=1
+2021-12-15 00:32:33.835 [34mINFO [0;39m [           main] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[197] : [fixed-10.10.8.175_8848] [subscribe] huma-gateway+DEFAULT_GROUP
+2021-12-15 00:32:33.835 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.CacheData [0;39m[ 92] : [fixed-10.10.8.175_8848] [add-listener] ok, tenant=, dataId=huma-gateway, group=DEFAULT_GROUP, cnt=1
+2021-12-15 00:32:33.836 [34mINFO [0;39m [           main] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[197] : [fixed-10.10.8.175_8848] [subscribe] huma-gateway.yml+DEFAULT_GROUP
+2021-12-15 00:32:33.836 [34mINFO [0;39m [           main] [36mc.a.n.client.config.impl.CacheData [0;39m[ 92] : [fixed-10.10.8.175_8848] [add-listener] ok, tenant=, dataId=huma-gateway.yml, group=DEFAULT_GROUP, cnt=1
+2021-12-15 00:32:34.003 [34mINFO [0;39m [0.10.8.175_8848] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[522] : get changedGroupKeys:[]
+2021-12-15 00:33:03.677 [34mINFO [0;39m [0.10.8.175_8848] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[522] : get changedGroupKeys:[]
+2021-12-15 00:33:33.260 [34mINFO [0;39m [0.10.8.175_8848] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[522] : get changedGroupKeys:[]
+2021-12-15 00:34:02.856 [34mINFO [0;39m [0.10.8.175_8848] [36mc.a.n.c.config.impl.ClientWorker   [0;39m[522] : get changedGroupKeys:[]
+2021-12-15 00:34:15.815 [34mINFO [0;39m [extShutdownHook] [36mio.undertow                        [0;39m[252] : stopping server: Undertow - 2.1.3.Final
+2021-12-15 00:34:15.834 [34mINFO [0;39m [extShutdownHook] [36mo.s.s.c.ThreadPoolTaskScheduler    [0;39m[218] : Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+2021-12-15 00:34:15.860 [34mINFO [0;39m [extShutdownHook] [36mc.a.c.n.r.NacosServiceRegistry     [0;39m[ 80] : De-registering from Nacos Server now...
+2021-12-15 00:34:15.861 [34mINFO [0;39m [extShutdownHook] [36mcom.alibaba.nacos.client.naming    [0;39m[ 79] : [BEAT] removing beat: DEFAULT_GROUP@@huma-gateway:172.222.222.18:7000 from beat map.
+2021-12-15 00:34:15.863 [34mINFO [0;39m [extShutdownHook] [36mcom.alibaba.nacos.client.naming    [0;39m[218] : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@huma-gateway with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","ip":"172.222.222.18","ipDeleteTimeout":30000,"metadata":{},"port":7000,"weight":1.0}

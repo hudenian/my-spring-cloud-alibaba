@@ -1,0 +1,12 @@
+spring:
+  profiles: dev
+  cloud:
+    gateway:
+      routes:
+        - id: cloud-api
+          uri: lb://cloud-api
+          predicates:
+            - Path=/cloud-api/**
+          filters:
+#            - StripPrefix=1
+#            - PreserveHostHeader

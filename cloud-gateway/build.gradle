@@ -6,12 +6,32 @@ bootJar {
     enabled = true
 }
 
-configurations {
-    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
-    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
-}
+//configurations {
+//    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
+//    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
+//}
 
 dependencies {
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//    implementation 'com.alibaba.csp:sentinel-spring-cloud-gateway-adapter'
 }
+
+//docker {
+//    registryCredentials {
+//        url = "${dockerUrl}"
+//        username = "${dockerUsername}"
+//        password = "${dockerPassword}"
+//        email = "${dockerEmail}"
+//    }
+//    springBootApplication {
+//        baseImage = "${dockerBaseImage}"
+//        maintainer = "${dockerMaintainer}"
+//        ports = [8400]
+//        images = ["micyo202/${project.name}:${project.version}"]
+//        jvmArgs = ['-Dspring.profiles.active=$env', '-Djava.security.egd=file:/dev/./urandom', '-Xmx512m']
+//        mainClassName = "${project.mainClassName}"
+//    }
+//}

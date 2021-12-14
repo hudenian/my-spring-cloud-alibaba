@@ -1,0 +1,24 @@
+server:
+  port: ${SERVER_PORT:7000}
+  servlet:
+    context-path: /gateway
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: on
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        metadata:
+          version: ${VERSION:v1}
+      config:
+        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        file-extension: yml
