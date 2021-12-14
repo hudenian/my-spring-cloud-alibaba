@@ -1,0 +1,12 @@
+jar {
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}
+
+dependencies {
+    api project(':cloud-common')
+    api project(':cloud-mapper')
+}

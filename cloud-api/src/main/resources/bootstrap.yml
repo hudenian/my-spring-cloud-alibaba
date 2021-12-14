@@ -1,0 +1,19 @@
+server:
+  port: ${SERVER_PORT:7100}
+  servlet:
+    context-path: /cloud-api
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: cloud-api
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        metadata:
+          version: ${VERSION:v1}
+      config:
+        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        file-extension: yml

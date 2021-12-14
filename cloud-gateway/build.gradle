@@ -1,0 +1,17 @@
+plugins {
+    id 'distribution'
+}
+
+bootJar {
+    enabled = true
+}
+
+configurations {
+    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
+    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
+}
+
+dependencies {
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+}
