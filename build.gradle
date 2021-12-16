@@ -33,7 +33,6 @@ allprojects {
 
         set('sentinelVersion', "1.7.1")
         set('druidVersion', "1.1.23")
-        set('mybatisPlusVersion', "3.3.1")
         set('velocityEngineVersion', "2.2")
         set('pagehelperVersion', "1.2.13")
         set('knife4jVersion', "2.0.2")
@@ -57,8 +56,6 @@ allprojects {
 
         dependencies {
             dependency "com.alibaba:druid-spring-boot-starter:${druidVersion}"
-            dependency "com.baomidou:mybatis-plus-boot-starter:${mybatisPlusVersion}"
-            dependency "com.baomidou:mybatis-plus-generator:${mybatisPlusVersion}"
             dependency "org.apache.velocity:velocity-engine-core:${velocityEngineVersion}"
             dependency "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperVersion}"
             dependency "com.github.xiaoymin:knife4j-spring-boot-starter:${knife4jVersion}"
@@ -139,6 +136,8 @@ subprojects {
         compileOnly {
             extendsFrom annotationProcessor
         }
+        // springcloud的gateway使用的是webflux,默认使用netty,所以从依赖中排除 tomcat相关的依赖
+        implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
     }
 
     dependencies {

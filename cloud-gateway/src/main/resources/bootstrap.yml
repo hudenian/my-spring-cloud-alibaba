@@ -1,7 +1,7 @@
 server:
   port: ${SERVER_PORT:7000}
-  servlet:
-    context-path: /gateway
+#  servlet:
+#    context-path: /gateway
 
 spring:
   profiles:
@@ -12,13 +12,13 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
+          enabled: true
           lower-case-service-id: on
     nacos:
       discovery:
-        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
         metadata:
           version: ${VERSION:v1}
       config:
-        server-addr: ${REGISTER_HOST:10.10.8.175}:${REGISTER_PORT:8848}
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
         file-extension: yml

@@ -6,10 +6,14 @@ bootJar {
     enabled = true
 }
 
-//configurations {
-//    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
-//    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
-//}
+configurations {
+    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
+    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
+    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    implementation.exclude group: 'javax.servlet', module: 'javax.servlet-api'
+    implementation.exclude group: 'javax.servlet', module: 'jstl'
+    implementation.exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-jasper'
+}
 
 dependencies {
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'

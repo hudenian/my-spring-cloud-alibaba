@@ -6,6 +6,7 @@ bootJar {
     enabled = true
 }
 
+
 dependencies {
     api project(':cloud-service')
 
