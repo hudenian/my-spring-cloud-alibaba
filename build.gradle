@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'org.springframework.boot' version '2.3.12.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'com.bmuschko.docker-spring-boot-application' version '6.1.3'
 }
@@ -22,16 +22,16 @@ allprojects {
         set('dockerBaseImage', "openjdk:8")
         set('dockerMaintainer', "Yanzheng (https://github.com/micyo202)")
 
-        set('springBootVersion', "2.2.6.RELEASE")
+        set('springBootVersion', "2.3.12.RELEASE")
         set('springBootAdminVersion', "2.2.1")
-        set('springCloudVersion', "Hoxton.SR8")
-        set('springCloudAlibabaVersion', "2.2.3.RELEASE")
+        set('springCloudVersion', "Hoxton.SR12")
+        set('springCloudAlibabaVersion', "2.2.7.RELEASE")
 
         set('lombokVersion', "1.18.12")
         set('junitJupiterVersion', "5.6.2")
         set('junitPlatformLauncherVersion', "1.6.2")
 
-        set('sentinelVersion', "1.7.1")
+        set('sentinelVersion', "1.8.2")
         set('druidVersion', "1.1.23")
         set('velocityEngineVersion', "2.2")
         set('pagehelperVersion', "1.2.13")
@@ -94,9 +94,9 @@ subprojects {
     // java编译的时候缺省状态下会因为中文字符而失败
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     ext {
-        set('springBootVersion', "2.3.3.RELEASE")
-        set('springCloudAlibabaVersion', "2.2.1.RELEASE")
-        set('springCloudVersion', "Hoxton.SR2")
+        set('springBootVersion', "2.3.12.RELEASE")
+        set('springCloudAlibabaVersion', "2.2.7.RELEASE")
+        set('springCloudVersion', "Hoxton.SR12")
         set('lombokVersion', "1.18.12")
     }
 

@@ -2,6 +2,8 @@ server:
   port: ${SERVER_PORT:7000}
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   profiles:
     active: dev
   application:
@@ -22,5 +24,7 @@ spring:
         file-extension: yml
     sentinel:
       transport:
-        dashboard: ${SENTINEL_DASHBOARD:10.10.8.175:4321}
+        dashboard: ${SENTINEL_DASHBOARD:localhost:8080}
+        port: 8881
+      eager: true
 

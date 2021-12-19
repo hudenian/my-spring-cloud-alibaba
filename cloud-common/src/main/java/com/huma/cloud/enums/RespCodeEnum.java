@@ -80,7 +80,7 @@ public enum RespCodeEnum {
     /**
      * nonce invalid
      */
-    SYSTEM_BUSY(30003, "The system is busy, please try again later");
+    SYSTEM_BUSY(90001, "The system is busy, please try again later");
 
     private final int code;
     private final String msg;
