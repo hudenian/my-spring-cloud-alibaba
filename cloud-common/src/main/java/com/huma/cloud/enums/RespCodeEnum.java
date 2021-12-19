@@ -75,7 +75,12 @@ public enum RespCodeEnum {
     /**
      * nonce invalid
      */
-    NONCE_INVALID(30002, "Nonce invalid");
+    NONCE_INVALID(30002, "Nonce invalid"),
+
+    /**
+     * nonce invalid
+     */
+    SYSTEM_BUSY(30003, "The system is busy, please try again later");
 
     private final int code;
     private final String msg;

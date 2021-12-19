@@ -24,8 +24,8 @@ allprojects {
 
         set('springBootVersion', "2.2.6.RELEASE")
         set('springBootAdminVersion', "2.2.1")
-        set('springCloudVersion', "Hoxton.SR2")
-        set('springCloudAlibabaVersion', "2.2.0.RELEASE")
+        set('springCloudVersion', "Hoxton.SR8")
+        set('springCloudAlibabaVersion', "2.2.3.RELEASE")
 
         set('lombokVersion', "1.18.12")
         set('junitJupiterVersion', "5.6.2")

@@ -1,7 +1,5 @@
 server:
   port: ${SERVER_PORT:7000}
-#  servlet:
-#    context-path: /gateway
 
 spring:
   profiles:
@@ -22,3 +20,7 @@ spring:
       config:
         server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
         file-extension: yml
+    sentinel:
+      transport:
+        dashboard: ${SENTINEL_DASHBOARD:10.10.8.175:4321}
+
